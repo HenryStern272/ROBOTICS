@@ -19,6 +19,23 @@ This project uses a Raspberry Pi 5, Pi Camera, and ultrasonic sensor to detect t
 - Jumper Wires
 - Custom Chassis: https://cad.onshape.com/documents/b67acd9fa4e773602ae2a329/w/8f72ac6179df8e27f44d4304/e/3dcb32b9252e35371910654f?renderMode=0&uiState=6ad39541a3517403a6f1ee55
 
+## GPIO Connections (Raspberry Pi)
+
+| Motor1_In1                     | 11 | GPIO 17 | GPIO.OUT (PWM) |
+|--------------------------------|----|---------|----------------|
+| Motor1_In2                     | 13 | GPIO 27 | GPIO.OUT (PWM) |
+| Motor2_In1                     | 16 | GPIO 23 | GPIO.OUT (PWM) |
+| Motor2_in2                     | 18 | GPIO 24 | GPIO.OUT (PWM) |
+| Motor1_En                      | 22 | GPIO 25 | GPIO.OUT       |
+| Motor2_En                      | 29 | GPIO 5  | GPIO.OUT       |
+| Motor_VOLT                     | 4  |         | VOLTS          |
+| Motor_GND                      | 6  |         | GND            |
+| To Ultrasonic Sensor 3.3V      | 1  |         | VOLTS          |
+| Trig                           | 32 | GPIO 12 | GPIO.OUT       |
+| Echo                           | 36 | GPIO 16 | GPI.IN         |
+| From Ultrasonic Sensor  to GND | 30 |         | GND            |
+
+
 ## Instructions
 
 ### 1\. Data Collection
@@ -55,9 +72,7 @@ cd yourproject
 pip install -r requirements.txt
 ```
 
-## Notes
+## Final Notes
 
 - Ensure the Pi Camera and ultrasonic sensor are connected and configured correctly.
-- Install all required Python dependencies before running the scripts.
-- Run the data collection and training scripts before real-time detection if the required dataset and trained model files do not already exist.
-- Verify the ultrasonic sensor's wiring and voltage levels to ensure safe operation with the Raspberry Pi 5.
+- Verify the ultrasonic sensor's wiring and voltage levels fall within range of hardware safety requirements.
