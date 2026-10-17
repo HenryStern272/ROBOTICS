@@ -10,6 +10,7 @@ This project uses a Raspberry Pi 5, Pi Camera, and ultrasonic sensor to detect t
 - Raspberry Pi Camera (PiCam)
 - 3.3–5V HC-SR04 Ultrasonic Distance Sensor
 - 12V/24V → 6V 10A 60W DC-DC Step-Down Converter
+- 5V Buck Converter
 - ADATA 64GB A2/U3/V30 MicroSD Card
 - Cytron MDD10A Dual-Channel Motor Driver
 - Pololu Multi-Hub Wheel w/Inserts for 3mm and 4mm Shafts - 80×10mm
@@ -17,7 +18,7 @@ This project uses a Raspberry Pi 5, Pi Camera, and ultrasonic sensor to detect t
 - ML5-12 12V 5Ah Battery
 - Caster Wheel Package (qty=4)
 - Jumper Wires
-- Custom Chassis: https://cad.onshape.com/documents/b67acd9fa4e773602ae2a329/w/8f72ac6179df8e27f44d4304/e/3dcb32b9252e35371910654f?renderMode=0&uiState=6ad39541a3517403a6f1ee55
+- Custom OnShape Chassis: https://cad.onshape.com/documents/b67acd9fa4e773602ae2a329/w/8f72ac6179df8e27f44d4304/e/3dcb32b9252e35371910654f?renderMode=0&uiState=6ad39541a3517403a6f1ee55
 
 ## GPIO Connections (Raspberry Pi)
 
@@ -66,11 +67,7 @@ python Run_File.py
 
 Clone the repository and install the required dependencies using pip:
 
-```bash
-git clone https://github.com
-cd yourproject
-pip install -r requirements.txt
-```
+`pip install -r requirements.txt`
 
 ## Final Notes
 
